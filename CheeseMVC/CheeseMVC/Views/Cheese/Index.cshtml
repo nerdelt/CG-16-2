@@ -1,0 +1,18 @@
+﻿@{
+    Layout = null;
+   
+}
+
+<h1>MyCheeses</h1>
+<p><a href="/Cheese/Add">Add Cheese</a></p>
+
+@if (ViewBag.Cheeses.Count == 0)
+{
+ <p>No cheeses yet!</p>
+}
+<ul>
+    @foreach(string cheese in ViewBag.Cheeses)       
+    {       
+     <li>@cheese</li>
+    }
+</ul>
