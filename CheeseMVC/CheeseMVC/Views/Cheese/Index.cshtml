@@ -2,12 +2,12 @@
 
 }
 <h1>My Cheeses</h1>
-<p><a asp-controller="Cheese" asp-action="Add">Add Cheese</a></p>
 
 @if (ViewBag.Cheeses.Count == 0)
 {
     <p>No cheeses yet!</p>
 }
+
 @if (ViewBag.Cheeses.Count > 0)
     {
 <p><a asp-controller="Cheese" asp-action="Remove">Remove Cheeses</a></p>
@@ -19,3 +19,5 @@
         <li>@pair.Key - @pair.Value</li>
     }
 </ul>
+
+<p><a asp-controller="Cheese" asp-action="Add">Add Cheese</a></p>
